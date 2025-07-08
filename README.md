@@ -20,7 +20,6 @@
 
 Moneko follows **Clean Architecture** and **MVVM** pattern, separating responsibilities across layers for maintainability and scalability.
 
-```plaintext
 UI (Jetpack Compose)
   ↑
 ViewModel (StateFlow + Logic)
