@@ -40,6 +40,47 @@ Room DB (Persistence)
 | StateFlow          | Reactive state management |
 | Navigation Compose | Multi-screen navigation   |
 
+PennyWise/<br>
+│<br>
+├── app/<br>
+│   ├── src/<br>
+│   │   ├── main/<br>
+│   │   │   ├── java/com/pennywise/<br>
+│   │   │   │   ├── data/                  # Room DB, DAO, repository impls<br>
+│   │   │   │   │   ├── dao/<br>
+│   │   │   │   │   ├── db/<br>
+│   │   │   │   │   ├── repository/<br>
+│   │   │   │   │   └── model/             # Data layer models (Room entities)<br>
+│   │   │   │   │<br>
+│   │   │   │   ├── domain/                # Pure business logic (clean)<br>
+│   │   │   │   │   ├── model/             # Domain models (can be same as data)<br>
+│   │   │   │   │   ├── repository/        # Repository interfaces<br>
+│   │   │   │   │   └── usecase/           # Use cases (interactors)<br>
+│   │   │   │   │       ├── transaction/<br>
+│   │   │   │   │       ├── loan/<br>
+│   │   │   │   │       └── dashboard/<br>
+│   │   │   │   │<br>
+│   │   │   │   ├── presentation/          # UI layer<br>
+│   │   │   │   │   ├── navigation/<br>
+│   │   │   │   │   ├── ui/<br>
+│   │   │   │   │   │   ├── dashboard/<br>
+│   │   │   │   │   │   ├── transactions/<br>
+│   │   │   │   │   │   ├── loans/<br>
+│   │   │   │   │   │   └── analysis/<br>
+│   │   │   │   │   ├── components/        # Shared composables<br>
+│   │   │   │   │   └── theme/             # Theme.kt, Colors.kt, etc.<br>
+│   │   │   │   │<br>
+│   │   │   │   ├── viewmodel/             # One ViewModel per screen<br>
+│   │   │   │   ├── di/                    # Hilt modules<br>
+│   │   │   │   ├── utils/                 # Mappers, extensions, helpers<br>
+│   │   │   │   └── MainActivity.kt<br>
+│   │   │   │<br>
+│   │   │   └── AndroidManifest.xml<br>
+│   └── build.gradle<br>
+├── build.gradle (project-level)<br>
+└── README.md<br>
+
+
 📱 Screens Overview
 - Dashboard: Total balance, loan summary, recent transactions
 = Transactions: View/add income or expenses
